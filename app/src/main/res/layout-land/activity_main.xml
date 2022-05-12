@@ -1,0 +1,36 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?android:attr/detailsElementBackground"
+    tools:context=".MainActivity">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="horizontal">
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragA"
+        class="com.example.ex2.FragA"
+        android:layout_width="373dp"
+        android:layout_height="354dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="28dp"
+        android:tag="FRAGA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout="@layout/frag_a" />
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragContainer"
+        android:layout_width="325dp"
+        android:layout_height="346dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="28dp"
+        android:background="?android:attr/detailsElementBackground"
+        android:tag="FRAGB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toEndOf="@+id/fragA"
+        app:layout_constraintTop_toTopOf="parent" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
